@@ -11,10 +11,14 @@ const userData = {
     email: 'support@isuro.tech'
 }
 
-//create a post
+//create a user
 // http.post('https://jsonplaceholder.typicode.com/users',userData).then((data) => console.log(data))
 // .catch((err) => console.log(err));
 
-//update a post
-http.put('https://jsonplaceholder.typicode.com/users/2',userData).then((data) => console.log(data))
+//update a user
+// http.put('https://jsonplaceholder.typicode.com/users/2',userData).then((data) => console.log(data))
+// .catch((err) => console.log(err));
+
+//delete user
+http.delete('https://jsonplaceholder.typicode.com/users/2',userData).then((data) => console.log(data))
 .catch((err) => console.log(err));
