@@ -14,3 +14,7 @@ const userData = {
 //create a post
 // http.post('https://jsonplaceholder.typicode.com/users',userData).then((data) => console.log(data))
 // .catch((err) => console.log(err));
+
+//update a post
+http.put('https://jsonplaceholder.typicode.com/users/2',userData).then((data) => console.log(data))
+.catch((err) => console.log(err));

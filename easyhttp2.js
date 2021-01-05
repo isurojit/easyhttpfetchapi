@@ -36,9 +36,20 @@
         });
     }
 
-    //Make Put Request
-    put(){
-
+    //Make HTTP PUT Request
+    put(url, data){
+        return new Promise((resolve, reject)=>{
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => resolve(data))
+                .catch(err => reject(err));
+        });
     }
 
     //Make Delete Request
